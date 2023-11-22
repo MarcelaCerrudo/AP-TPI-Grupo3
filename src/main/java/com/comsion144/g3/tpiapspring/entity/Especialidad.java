@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 public class Especialidad {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     @ManyToMany(mappedBy = "especialidades")

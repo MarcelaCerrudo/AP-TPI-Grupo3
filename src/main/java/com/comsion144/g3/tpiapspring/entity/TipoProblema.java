@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class TipoProblema {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tipo;
     @Column(name = "tiempoEstimado(Días)")
