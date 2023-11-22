@@ -33,5 +33,5 @@ public class Cliente {
         inverseJoinColumns = @JoinColumn(name = "servicio_id"))
         Set<Servicio> servicios;
     @OneToMany
-    private List<RegistroDeIncidentes> registroDeIncidentes;
+    private Set<RegistroDeIncidentes> registroDeIncidentes;
 }

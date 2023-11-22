@@ -29,7 +29,8 @@ public class RegistroDeIncidentes {
     @ManyToOne
     @JoinColumn(name="tecnico_id", referencedColumnName = "id")
     private Tecnico tecnico;
-    private String detalles;
+    private String detalleProblema;
+    private String observacionesTecnicas;
     private Boolean resuelto;
 
 }

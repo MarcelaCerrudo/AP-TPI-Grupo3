@@ -6,8 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
-@Table(name = "tipoProblema")
+@Table(name = "tipo_problema")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,9 +19,8 @@ public class TipoProblema {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tipo;
-    @Column(name = "tiempoEstimado(Días)")
+    @Column(name = "tiempoEstimado(Dias)")
     private Integer tiempo;
-    @ManyToOne
-    @JoinColumn(name="especialidad_id", referencedColumnName = "id")
-    private Especialidad especialidad;
+    @ManyToMany(mappedBy = "problemas")
+    Set<Especialidad> especialidades;
 }

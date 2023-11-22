@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Set;
+
 @Entity
 @Table(name = "tecnico")
 @Data
@@ -19,11 +21,11 @@ public class Tecnico {
     private Long id;
     private String nombre;
     private String mail;
-    @Column(name = "num Teléfono")
+    @Column(name = "num_telefono")
     private String numTel;
     @ManyToMany
-    private List<Especialidad> especialidades;
-    @OneToMany
-    private List<RegistroDeIncidentes> registroDeIncidentes;
+    private Set<Especialidad> especialidades;
+    //@OneToMany
+    //private List<RegistroDeIncidentes> registroDeIncidentes;
 
 }
