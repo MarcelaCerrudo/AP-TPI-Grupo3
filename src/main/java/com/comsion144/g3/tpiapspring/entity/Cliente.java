@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -31,4 +32,6 @@ public class Cliente {
         joinColumns = @JoinColumn(name = "cliente_id"),
         inverseJoinColumns = @JoinColumn(name = "servicio_id"))
         Set<Servicio> servicios;
+    @OneToMany
+    private List<RegistroDeIncidentes> registroDeIncidentes;
 }
