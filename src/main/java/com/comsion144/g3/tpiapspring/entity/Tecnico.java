@@ -21,6 +21,8 @@ public class Tecnico {
     private String mail;
     @Column(name = "num Teléfono")
     private String numTel;
+    @ManyToMany
+    private List<Especialidad> especialidades;
 
 
 

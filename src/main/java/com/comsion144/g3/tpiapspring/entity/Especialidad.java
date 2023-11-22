@@ -6,8 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+import java.util.List;
 
+@Entity
 @Table(name = "especialidad")
 @Data
 @NoArgsConstructor
@@ -17,7 +18,11 @@ public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+   private String nombre;
+   @ManyToMany(mappedBy = "especialidades")
+   private List<Tecnico> tecnicos;
 
-    private String nombre;
+   @OneToMany
+   private List<TipoProblema> problemas;
 
 }

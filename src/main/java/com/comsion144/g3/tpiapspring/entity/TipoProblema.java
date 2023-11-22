@@ -19,4 +19,7 @@ public class TipoProblema {
     private String tipo;
     @Column(name = "tiempoEstimado(Días)")
     private Integer tiempo;
+    @ManyToOne
+    @JoinColumn(name="especialidad_id", referencedColumnName = "id")
+    private Especialidad especialidad;
 }
