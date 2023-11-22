@@ -7,28 +7,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
 @Entity
-@Table(name = "tecnico")
+@Table(name = "servicio")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Tecnico {
+public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
-    private String mail;
-    @Column(name = "num Teléfono")
-    private String numTel;
     @ManyToMany
-    private List<Especialidad> especialidades;
+    private List<Cliente> clientes;
     @OneToMany
-    private List<RegistroDeIncidentes> registroDeIncidentes;
-
-
-
-
+    private List<Incidente> incidentes;
 
 
 }

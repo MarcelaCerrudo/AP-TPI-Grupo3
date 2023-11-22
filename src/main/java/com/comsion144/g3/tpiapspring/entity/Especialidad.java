@@ -18,11 +18,10 @@ public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-   private String nombre;
-   @ManyToMany(mappedBy = "especialidades")
-   private List<Tecnico> tecnicos;
-
-   @OneToMany
-   private List<TipoProblema> problemas;
+    private String nombre;
+    @ManyToMany(mappedBy = "especialidades")
+    private List<Tecnico> tecnicos;
+    @OneToMany
+    private List<TipoProblema> problemas;
 
 }
