@@ -20,9 +20,9 @@ public class Especialidad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    @ManyToMany(mappedBy = "especialidades")
-    private Set<Tecnico> tecnicos;
+    @ManyToMany(mappedBy = "especialidad")
+    private Set<Tecnico> tecnico;
     @ManyToMany
-    private Set<TipoProblema> problemas;
+    private Set<TipoProblema> problema;
 
 }

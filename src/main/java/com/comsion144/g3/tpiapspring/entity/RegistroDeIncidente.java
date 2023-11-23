@@ -7,14 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
-@Table(name = "registroIncidentes")
+@Table(name = "registro_incidente")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RegistroDeIncidentes {
+public class RegistroDeIncidente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,8 +30,10 @@ public class RegistroDeIncidentes {
     @ManyToOne
     @JoinColumn(name="tecnico_id", referencedColumnName = "id")
     private Tecnico tecnico;
+    @ManyToMany
+    Set<TipoProblema> problema;
     private String detalleProblema;
-    private String observacionesTecnicas;
+    private String observacionTecnica;
     private Boolean resuelto;
 
 }

@@ -19,8 +19,9 @@ public class TipoProblema {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tipo;
-    @Column(name = "tiempoEstimado(Dias)")
     private Integer tiempo;
-    @ManyToMany(mappedBy = "problemas")
-    Set<Especialidad> especialidades;
+    @ManyToMany(mappedBy = "problema")
+    Set<Especialidad> especialidad;
+    @ManyToMany(mappedBy = "problema")
+    Set<RegistroDeIncidente> registro;
 }

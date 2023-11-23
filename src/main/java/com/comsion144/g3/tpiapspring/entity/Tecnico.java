@@ -21,11 +21,7 @@ public class Tecnico {
     private Long id;
     private String nombre;
     private String mail;
-    @Column(name = "num_telefono")
-    private String numTel;
+    private String telefono;
     @ManyToMany
-    private Set<Especialidad> especialidades;
-    //@OneToMany
-    //private List<RegistroDeIncidentes> registroDeIncidentes;
-
+    private Set<Especialidad> especialidad;
 }

@@ -19,6 +19,6 @@ public class Servicio {
     private Long id;
     private String nombre;
 
-    @ManyToMany(mappedBy = "servicios")
-    Set<Cliente> clientes;
+    @ManyToMany(mappedBy = "servicio")
+    Set<Cliente> cliente;
 }

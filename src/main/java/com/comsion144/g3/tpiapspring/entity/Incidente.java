@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "incidente")
@@ -23,7 +23,7 @@ public class Incidente {
     @ManyToOne
     @JoinColumn(name="servicio_id", referencedColumnName = "id")
     private Servicio servicio;
-    @OneToMany
-    private List<RegistroDeIncidentes> registroDeIncidentes;
+    //@OneToMany
+    //private Set<RegistroDeIncidente> registroDeIncidente;
 
 }
