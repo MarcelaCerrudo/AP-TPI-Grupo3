@@ -8,6 +8,11 @@ Proyecto Spring Boot del Trabajo Práctico Integrador para el curso DESARROLLADO
 - `Myriam Leal`
 - `Javier Pintos`
 
+<h2>Modelo de datos</h2>
+
+```
+https://drive.google.com/file/d/1evOvj9PQ4rSChDK2tQutYxExgcSRZQsX/view?usp=sharing
+```
 
 <h2>Ejecutar de forma local</h2>
 
